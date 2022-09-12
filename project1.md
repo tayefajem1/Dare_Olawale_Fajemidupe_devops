@@ -1,4 +1,4 @@
-# Projec1
+# Project 1
 connecting to window
 cd Downloads (The .pen file is downloaded to Downloads)
 ssh -i <private-key-name>.pem ubuntu@<Public-IP-address>
