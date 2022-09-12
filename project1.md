@@ -72,7 +72,7 @@ sudo vim /etc/apache2/mods-enabled/dir.conf
 </IfModule>
   # Reload apache 2 again
   sudo systemctl reload apache2
-  #Create a new file named index.php inside your custom web root folder:
+  Create a new file named index.php inside your custom web root folder:
   <?php
 phpinfo();
 
