@@ -78,6 +78,7 @@ phpinfo();
 
 ![image](https://user-images.githubusercontent.com/53397202/189695177-1d44cb56-5f9f-4fdd-8fd0-2e110f04685d.png)
 ![image](https://user-images.githubusercontent.com/53397202/189697493-057d6f08-e4a3-40a4-b117-490a85c91056.png)
+![image](https://user-images.githubusercontent.com/53397202/189700926-014bccc7-9168-417c-8d93-d0602560fe5d.png)
 
 # Remove PHP file
 sudo rm /var/www/projectlamp/index.php
