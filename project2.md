@@ -80,5 +80,32 @@ http://18.217.25.146/info.php
 ![image](https://user-images.githubusercontent.com/53397202/190863482-b3312250-acc2-4547-857c-37db46ae549b.png)
 
 ![image](https://user-images.githubusercontent.com/53397202/190863797-51cfe637-b599-45af-b8d6-814a55df0e34.png)
+# Remove PHP Page when you are done
+sudo rm /var/www/your_domain/info.php
+# Login to mysql Database and create new database
+CREATE DATABASE `example_database`;
+The name of the database  `example_database'
+![image](https://user-images.githubusercontent.com/53397202/190865137-f12d3ff5-de6b-455c-a21f-0e1ed9fdcb5e.png)
+# To create new user on the database: create a new user and grant him full privileges on the database you have just created.
+CREATE USER 'example_user'@'%' IDENTIFIED WITH mysql_native_password BY 'xxxxxxxxx.';
+GRANT ALL ON example_database.* TO 'example_user'@'%';
+![image](https://user-images.githubusercontent.com/53397202/190865476-d6e82334-1942-4186-954c-347ce9aef30c.png)
+![image](https://user-images.githubusercontent.com/53397202/190865552-ec31a6ed-caac-49d7-a77a-57a2e37725c6.png)
+# Create TO-DO-LIST (Create new table
+![image](https://user-images.githubusercontent.com/53397202/190865943-91d8676f-42c8-4486-bb8e-69da81d2a8a8.png)
+
+CREATE TABLE example_database.todo_list (   
+ item_id INT AUTO_INCREMENT,
+content VARCHAR(255),
+PRIMARY KEY(item_id)
+);
+Insert values into the table created: INSERT INTO example_database.todo_list (content) VALUES ("My first important item");
+Query your table: SELECT * FROM example_database.todo_list;
+exit
+# create a PHP script that will connect to MySQL and query for your content. Create a new PHP file in your custom web root directory using your preferred editor. We’ll use vi for that:
+
+nano /var/www/projectLEMP/todo_list.php
+
+
 
  
