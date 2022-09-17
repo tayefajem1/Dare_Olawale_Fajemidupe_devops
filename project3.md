@@ -31,4 +31,9 @@ Continue to press enter from the keybord
 ![image](https://user-images.githubusercontent.com/53397202/190871351-26d8b9bc-fed6-4ee7-b453-928396b8060f.png)
 run ls (To confirm you have the package.json
 ![image](https://user-images.githubusercontent.com/53397202/190871416-c0e13c3e-4661-48e4-820a-ec08ec507515.png)
+# To install EXPRESSJS
+npm install express
+# Create a file called index.js
+touch ndex.js
+![image](https://user-images.githubusercontent.com/53397202/190871619-a77f69cf-91a4-4778-bd3c-5c83ea4c7073.png)
 
