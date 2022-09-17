@@ -79,5 +79,6 @@ phpinfo();
 http://18.217.25.146/info.php
 ![image](https://user-images.githubusercontent.com/53397202/190863482-b3312250-acc2-4547-857c-37db46ae549b.png)
 
+![image](https://user-images.githubusercontent.com/53397202/190863797-51cfe637-b599-45af-b8d6-814a55df0e34.png)
 
  
