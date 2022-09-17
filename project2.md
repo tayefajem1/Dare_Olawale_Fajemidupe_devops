@@ -70,8 +70,13 @@ server {
   sudo systemctl reload nginx
   ## Your new website is now active, but the web root /var/www/projectLEMP is still empty. Create an index.html file in that location so that we can test that your new server block works as expected:
  sudo echo 'Hello LEMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectLEMP/index.html
-  
   ![image](https://user-images.githubusercontent.com/53397202/190863179-493aecf6-3870-4262-ae35-8a45e6c2560b.png)
-  
+ # Testing php
+ sudo nano /var/www/projectLEMP/info.php
+  paste:
+  <?php
+phpinfo();
+![image](https://user-images.githubusercontent.com/53397202/190863482-b3312250-acc2-4547-857c-37db46ae549b.png)
+
 
  
