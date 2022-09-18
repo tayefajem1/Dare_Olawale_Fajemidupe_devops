@@ -242,6 +242,14 @@ Click HERE to learn how perform CRUD operartions on Postman
 You should test all the API endpoints and make sure they are working. For the endpoints that require body, you should send JSON back with the necessary fields since it’s what we setup in our code.
 
 Now open your Postman, create a POST request to the API http://<PublicIP-or-PublicDNS>:5000/api/todos. This request sends a new task to our To-Do list so the application could store it in the database.
+ 
+ # Post in postman
+ ![image](https://user-images.githubusercontent.com/53397202/190901808-f0ba0d64-fdea-43e0-b158-f3dc270561c9.png)
+# for Get in Postman
+ ![image](https://user-images.githubusercontent.com/53397202/190901872-1cd2ea2c-a8c6-4789-b65c-ccfae1fbc427.png)
+# Delete
+ ![image](https://user-images.githubusercontent.com/53397202/190902019-6d104bbb-ea49-4442-ac69-4eceaf6654f0.png)
+
 
  
 
