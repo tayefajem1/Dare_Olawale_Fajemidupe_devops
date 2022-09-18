@@ -249,8 +249,34 @@ Now open your Postman, create a POST request to the API http://<PublicIP-or-Publ
  ![image](https://user-images.githubusercontent.com/53397202/190901872-1cd2ea2c-a8c6-4789-b65c-ccfae1fbc427.png)
 # Delete
  ![image](https://user-images.githubusercontent.com/53397202/190902019-6d104bbb-ea49-4442-ac69-4eceaf6654f0.png)
+# Frontend creation
+ it is time to create a user interface for a Web client (browser) to interact with the application via API. To start out with the frontend of the To-do app, we will use the create-react-app command to scaffold our app.
+ * npx create-react-app client*
+![image](https://user-images.githubusercontent.com/53397202/190902235-5dd0f64f-facf-46ae-9648-4daa69eb63b6.png)
+ 
+# Running a React App
+Before testing the react app, there are some dependencies that need to be installed.
+ 
+1. Install concurrently. It is used to run more than one command simultaneously from the same terminal window.
+ *npm install concurrently --save-dev*
+ ![image](https://user-images.githubusercontent.com/53397202/190902348-e22e5103-99a1-4680-9a8e-cc276a13aba8.png)
 
+2. Install nodemon. It is used to run and monitor the server. If there is any change in the server code, nodemon will restart it automatically and load the new changes.
+ *npm install nodemon --save-dev*
+ ![image](https://user-images.githubusercontent.com/53397202/190902384-df9057dd-f19c-4157-9553-8b5bf739f9ec.png)
+ 
+ 3. In Todo folder open the package.json file. Change the highlighted part of the below screenshot and replace with the code below.
+ 
+# Configure Proxy in package.json
+Change directory to ‘client’
+*cd client*
+Open the package.json file
+*vi package.json*
+Add the key value pair in the package.json file "proxy": "http://localhost:5000".
+The whole purpose of adding the proxy configuration in number 3 above is to make it possible to access the application directly from the browser by simply calling the server url like http://localhost:5000 rather than always including the entire path like http://localhost:5000/api/todos
+ 
 
+Now, ensure you are inside the Todo directory, and simply do:
  
 
 
