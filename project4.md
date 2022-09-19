@@ -65,6 +65,7 @@ sudo npm install express mongoose
 ![image](https://user-images.githubusercontent.com/53397202/191047861-ef4bff0d-fd93-4690-9e53-e5166ed3f306.png)
 # In ‘Books’ folder, create a folder named apps
 mkdir apps && cd apps
+
 ![image](https://user-images.githubusercontent.com/53397202/191048302-7fdf597d-41b5-47aa-802c-4339bd60b5d0.png)
 
 
