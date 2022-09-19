@@ -75,6 +75,7 @@ sudo vim /etc/apache2/mods-enabled/dir.conf
   Create a new file named index.php inside your custom web root folder:
   <?php
 phpinfo();
+![image](https://user-images.githubusercontent.com/53397202/191023247-df5abf40-1a86-4079-a18d-b49c403b4af0.png)
 
 ![image](https://user-images.githubusercontent.com/53397202/189695177-1d44cb56-5f9f-4fdd-8fd0-2e110f04685d.png)
 ![image](https://user-images.githubusercontent.com/53397202/189697493-057d6f08-e4a3-40a4-b117-490a85c91056.png)
