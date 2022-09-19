@@ -78,6 +78,7 @@ phpinfo();
 
 ![image](https://user-images.githubusercontent.com/53397202/191023247-df5abf40-1a86-4079-a18d-b49c403b4af0.png)
 
+![php](https://user-images.githubusercontent.com/53397202/191023756-d3de870c-cb66-4339-bfe3-79a116b203ae.png)
 
 
 # Remove PHP file
