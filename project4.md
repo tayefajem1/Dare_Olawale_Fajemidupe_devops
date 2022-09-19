@@ -36,3 +36,37 @@ sudo aptutide install -y npm
 # Install body-parser package
 sudo npm install body-parser
 ![image](https://user-images.githubusercontent.com/53397202/191045589-655f5d24-ac85-43e6-b1d7-85f45a76a3ba.png)
+# Create a folder named ‘Books’
+mkdir Books && cd Books
+![image](https://user-images.githubusercontent.com/53397202/191046060-1a48642e-6740-4f15-a32a-f94f99e4e2f8.png)
+# Initialize npm project in Book
+![image](https://user-images.githubusercontent.com/53397202/191046380-dd7d5e55-9fd1-4b04-a615-f20cf2ded468.png)
+# Add a file to it named server.js
+vi server.js
+Paste the code below;
+var express = require('express');
+var bodyParser = require('body-parser');
+var app = express();
+app.use(express.static(__dirname + '/public'));
+app.use(bodyParser.json());
+require('./apps/routes')(app);
+app.set('port', 3300);
+app.listen(app.get('port'), function() {
+    console.log('Server up: http://localhost:' + app.get('port'));
+});
+# Install Express and set up routes to the server
+
+Express is a minimal and flexible Node.js web application framework that provides features for web and mobile applications. We will use Express in to pass book information to and from our MongoDB database.
+
+We also will use Mongoose package which provides a straight-forward, schema-based solution to model your application data. We will use Mongoose to establish a schema for the database to store data of our book register.
+
+sudo npm install express mongoose
+
+![image](https://user-images.githubusercontent.com/53397202/191047861-ef4bff0d-fd93-4690-9e53-e5166ed3f306.png)
+# In ‘Books’ folder, create a folder named apps
+mkdir apps && cd apps
+![image](https://user-images.githubusercontent.com/53397202/191048302-7fdf597d-41b5-47aa-802c-4339bd60b5d0.png)
+
+
+
+
