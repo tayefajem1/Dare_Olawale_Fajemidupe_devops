@@ -1,44 +1,44 @@
 # Project MERN
-# update ubuntu
+### Update ubuntu
 sudo apt update
 ![image](https://user-images.githubusercontent.com/53397202/190870228-8182d9e8-8250-4fcc-856d-0fd46afbf399.png)
 
-# To upgrade
+### To upgrade
 sudo apt upgrade
 ![image](https://user-images.githubusercontent.com/53397202/190870456-c404a852-4e66-4a1f-87db-08ecbb14648d.png)
-# To get the location of Node.js software from Ubuntu repositories.
+### To get the location of Node.js software from Ubuntu repositories.
 curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 ![image](https://user-images.githubusercontent.com/53397202/190870507-d01ca6f0-6f30-4914-9d36-4a6273e4a8b3.png)
-# Install nodejs server
+### Install nodejs server
 sudo apt-get install -y nodejs
-# Verify version of nodejs installed
+### Verify version of nodejs installed
 node -v
 npm -v 
 ![image](https://user-images.githubusercontent.com/53397202/190870885-7d446ad9-3916-4345-b02a-7d766a2483d7.png)
 
-# Create a new directory for your To-Do project:
+### Create a new directory for your To-Do project:
 mkdir Todo
 ![image](https://user-images.githubusercontent.com/53397202/190871007-0c6591aa-e0e6-4f74-81b2-43362f7c07d1.png)
-# To see if TODO is created
+### To see if TODO is created
 ls
 ls -lih 
 ls --help
-# Change directory to TODO
+### Change directory to TODO
 cd Todouse the command npm init to initialise your project, so that a new file named package.json will be created. This file will normally contain information about your application and the dependencies that it needs to run. Follow the prompts after running the command. You can press Enter several times to accept default values, then accept to write out the package.json file by typing yes.
-# To initialize, use the command npm init to initialise your project, so that a new file named package.json will be created. This file will normally contain information about your application and the dependencies that it needs to run. Follow the prompts after running the command. You can press Enter several times to accept default values, then accept to write out the package.json file by typing yes.
+### To initialize, use the command npm init to initialise your project, so that a new file named package.json will be created. This file will normally contain information about your application and the dependencies that it needs to run. Follow the prompts after running the command. You can press Enter several times to accept default values, then accept to write out the package.json file by typing yes.
 npm init
 Continue to press enter from the keybord
 ![image](https://user-images.githubusercontent.com/53397202/190871351-26d8b9bc-fed6-4ee7-b453-928396b8060f.png)
 run ls (To confirm you have the package.json
 ![image](https://user-images.githubusercontent.com/53397202/190871416-c0e13c3e-4661-48e4-820a-ec08ec507515.png)
-# To install EXPRESSJS
+### To install EXPRESSJS
 npm install express
-# Create a file called index.js
+### Create a file called index.js
 touch ndex.js
 ![image](https://user-images.githubusercontent.com/53397202/190871619-a77f69cf-91a4-4778-bd3c-5c83ea4c7073.png)
-# Install the dotenv module
+### Install the dotenv module
 ![image](https://user-images.githubusercontent.com/53397202/190871687-6bc7c808-2c47-42d4-8fad-b54c233cd34b.png)
-# Open the index.js file with the command below
+### Open the index.js file with the command below
 vim index.js
 Paste the below:
 const express = require('express');
@@ -61,15 +61,15 @@ res.send('Welcome to Express');
 app.listen(port, () => {
 console.log(`Server running on port ${port}`)
 });
-# To very if server is running
+### To very if server is running
 node index.js
 Server running on port 5000
 ![image](https://user-images.githubusercontent.com/53397202/190871963-560e036e-7795-4499-931d-5bf3daaa22ee.png)
-# set your instance port 5000
+### set your instance port 5000
 Browse http://3.133.148.207:5000
-# To get you IP address and dns run the command below
+### To get you IP address and dns run the command below
  Run curl -s http://169.254.169.254/latest/meta-data/public-ipv4 for Public IP address or curl -s http://169.254.169.254/latest/meta-data/public-hostname for Public DNS name.
- # 3 ways to Route
+ ### 3 ways to Route
  Routes
 There are three actions that our To-Do application needs to be able to do:
 
@@ -79,13 +79,13 @@ Delete a completed task
 Each task will be associated with some particular endpoint and will use different standard HTTP request methods: POST, GET, DELETE.
 
 For each task, we need to create routes that will define various endpoints that the To-do app will depend on. So let us create a folder routes
-# Create directory route
+### Create directory route
 mkdir routes
-# change to route folder
+### change to route folder
 cd routes
-# Create file api.js inside routes
+### Create file api.js inside routes
 touch api.js
-# Open api.js and paste
+### Open api.js and paste
 vim api.js
 paste
 const express = require ('express');
@@ -107,7 +107,7 @@ module.exports = router;
 
 ![image](https://user-images.githubusercontent.com/53397202/190872309-18ac9e2d-ac5c-4323-8410-5f33b01f2217.png)
 
-# MODEL
+### MODEL
 Now comes the interesting part, since the app is going to make use of Mongodb which is a NoSQL database, we need to create a model.
 
 A model is at the heart of JavaScript based applications, and it is what makes it interactive.
@@ -119,18 +119,18 @@ In essence, the Schema is a blueprint of how the database will be constructed, i
 To create a Schema and a model, install mongoose which is a Node.js package that makes working with mongodb easier.
 
 Change directory back Todo folder with cd .. and install Mongoose
-# Intall Mongoose
+### Intall Mongoose
 npm install mongoose
 ![image](https://user-images.githubusercontent.com/53397202/190872994-778ec154-3375-4234-835d-c0182417de02.png)
-# Create model
+### Create model
 mkdir models
-# Change to model
+### Change to model
 cd model
-# create todo.js file inside models
+### create todo.js file inside models
 touch todo.js
-# you can define all the command at once
+### you can define all the command at once
 mkdir models && cd models && touch todo.js
-# Open todo and paste (some ....)
+### Open todo and paste (some ....)
 paste:
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
@@ -147,7 +147,7 @@ required: [true, 'The todo text field is required']
 const Todo = mongoose.model('todo', TodoSchema);
 
 module.exports = Todo;
-# Now we need to update our routes from the file api.js in ‘routes’ directory to make use of the new model. In Routes directory, open api.js with vim api.js, delete the code inside with :%d command and paste there code below into it then save and exit
+### Now we need to update our routes from the file api.js in ‘routes’ directory to make use of the new model. In Routes directory, open api.js with vim api.js, delete the code inside with :%d command and paste there code below into it then save and exit
 Paste:
 const express = require ('express');
 const router = express.Router();
@@ -180,12 +180,12 @@ Todo.findOneAndDelete({"_id": req.params.id})
 })
 
 module.exports = router;
-# Sign up to MongoDb and configure
+### Sign up to MongoDb and configure
 create a file in Todo foldetr
 touch .env
-# Open the file
+### Open the file
 vi .env
-# Add the connection string to access the database in it, just as below:
+### Add the connection string to access the database in it, just as below:
 DB = 'mongodb+srv://<username>:<password>@<network-address>/<dbname>?retryWrites=true&w=majority'
 # Delete contect in node.js
   const express = require('express');
@@ -225,7 +225,7 @@ next();
 app.listen(port, () => {
 console.log(`Server running on port ${port}`)
 });
-# Start node.js
+### Start node.js
   node index.js
  ![image](https://user-images.githubusercontent.com/53397202/190877154-6fcd0faa-3427-469d-8add-e67642063c93.png)
  
@@ -243,13 +243,13 @@ You should test all the API endpoints and make sure they are working. For the en
 
 Now open your Postman, create a POST request to the API http://<PublicIP-or-PublicDNS>:5000/api/todos. This request sends a new task to our To-Do list so the application could store it in the database.
  
- # Post in postman
+### Post in postman
  ![image](https://user-images.githubusercontent.com/53397202/190901808-f0ba0d64-fdea-43e0-b158-f3dc270561c9.png)
-# for Get in Postman
+### for Get in Postman
  ![image](https://user-images.githubusercontent.com/53397202/190901872-1cd2ea2c-a8c6-4789-b65c-ccfae1fbc427.png)
-# Delete
+### Delete
  ![image](https://user-images.githubusercontent.com/53397202/190902019-6d104bbb-ea49-4442-ac69-4eceaf6654f0.png)
-# Frontend creation
+### Frontend creation
  it is time to create a user interface for a Web client (browser) to interact with the application via API. To start out with the frontend of the To-do app, we will use the create-react-app command to scaffold our app.
  * npx create-react-app client*
 ![image](https://user-images.githubusercontent.com/53397202/190902235-5dd0f64f-facf-46ae-9648-4daa69eb63b6.png)
@@ -267,7 +267,7 @@ Before testing the react app, there are some dependencies that need to be instal
  
  3. In Todo folder open the package.json file. Change the highlighted part of the below screenshot and replace with the code below.
  
-# Configure Proxy in package.json
+### Configure Proxy in package.json
 Change directory to ‘client’
 *cd client*
 Open the package.json file
@@ -282,7 +282,7 @@ Important note: In order to be able to access the application from the Internet 
 Creating your React Components
 One of the advantages of react is that it makes use of components, which are reusable and also makes code modular. For our Todo app, there will be two stateful components and one stateless component.
 From your Todo directory run
- # Change to client
+### Change to client
  cd client
  cd src
  Inside your src folder create another folder called components
@@ -338,11 +338,11 @@ export default Input
 
 Move to the src folder
  cd .. (2x)
-# Install Axios
+### Install Axios
  ![image](https://user-images.githubusercontent.com/53397202/190908252-f420be32-65e1-4b0e-8956-60d023745d7a.png)
- # change to src and components
+### change to src and components
  cd src/components
-# After that open your ListTodo.js
+### After that open your ListTodo.js
  vi ListTodo.js
 import React from 'react';
 
@@ -370,7 +370,7 @@ return (
 }
 
 export default ListTodo
-# Open Todo.js file you write the following code
+### Open Todo.js file you write the following code
  import React, {Component} from 'react';
 import axios from 'axios';
 
@@ -426,9 +426,9 @@ let { todos } = this.state;
 }
 
 export default Todo;
-# We need to make little adjustment to our react code. Delete the logo and adjust our App.js to look like this.
+### We need to make little adjustment to our react code. Delete the logo and adjust our App.js to look like this.
 Move to the src folder 
-# In src folder run open
+### In src folder run open
  vi App.js
 delete the initial import logo and paste the following:
  import React from 'react';
@@ -561,7 +561,7 @@ monospace;
 }
  ![image](https://user-images.githubusercontent.com/53397202/190911189-7f676ae2-8cdb-4c79-b5dd-6223da067d9e.png)
  
- # Run the code below when change to Todo folder
+ ### Run the code below when change to Todo folder
  npm run dev
  ![image](https://user-images.githubusercontent.com/53397202/190911393-cbde8291-ce8d-42c6-b928-0b9fa52453b4.png)
 
