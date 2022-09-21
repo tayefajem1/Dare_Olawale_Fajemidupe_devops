@@ -1,47 +1,47 @@
 # MEAN STACK
-### updating in ubuntu machine
+### Updating in ubuntu machine
 sudo apt update
 ![image](https://user-images.githubusercontent.com/53397202/191009540-4cbb6710-0710-4133-9b6a-a11b35a3c39c.png)
-# Upgrade the server
+### Upgrade the server
 sudo apt upgrade
-# Add certificate
+### Add certificate
 sudo apt -y install curl dirmngr apt-transport-https lsb-release ca-certificates
 ![image](https://user-images.githubusercontent.com/53397202/191010890-ce66e7b0-fbe1-43ea-a677-ce935ee13922.png)
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash 
 ![image](https://user-images.githubusercontent.com/53397202/191011161-1c3450f7-987e-4701-97b4-1a92403106f3.png)
 
-# Install node.js
+### Install node.js
 sudo apt install -y nodejs
 ![image](https://user-images.githubusercontent.com/53397202/191011697-1ed27314-ede3-4793-ab77-88553faf120b.png)
-# Install MongoDB
+### Install MongoDB
 MongoDB stores data in flexible, JSON-like documents. Fields in a database can vary from document to document and data structure can be changed over time. For our example application, we are adding book records to MongoDB that contain book name, isbn number, author, and number of pages.
 mages/WebConsole.gif
 *sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6*
 ![image](https://user-images.githubusercontent.com/53397202/191012105-c65a696d-50aa-458d-9bad-a3f916405e80.png)
 *echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list*
 ![image](https://user-images.githubusercontent.com/53397202/191012348-4fe87326-1b9d-4d59-b5cb-65f8f331a81d.png)
-# Install MongoDB
+### Install MongoDB
 sudo apt install -y mongodb
 ![image](https://user-images.githubusercontent.com/53397202/191042498-9556360c-4856-4adb-bc03-83f5691132c5.png)
-# Start The server
+### Start The server
  sudo service mongodb start
  ![image](https://user-images.githubusercontent.com/53397202/191042964-1cbbc135-8454-4c8e-9730-9df35c3c813a.png)
-# Verify that the service is up and running
+### Verify that the service is up and running
 sudo systemctl status mongodb
 ![image](https://user-images.githubusercontent.com/53397202/191043324-35420920-d21f-431c-9581-3695c3f476fe.png)
-# Install npm – Node package manager.
+### Install npm – Node package manager.
 First install aptitude on the machine: sudo apt-get install aptitude
 Use aptitude to install npm: sudo aptutide install -y npm 
 sudo aptutide install -y npm
-# Install body-parser package
+### Install body-parser package
 sudo npm install body-parser
 ![image](https://user-images.githubusercontent.com/53397202/191045589-655f5d24-ac85-43e6-b1d7-85f45a76a3ba.png)
-# Create a folder named ‘Books’
+### Create a folder named ‘Books’
 mkdir Books && cd Books
 ![image](https://user-images.githubusercontent.com/53397202/191046060-1a48642e-6740-4f15-a32a-f94f99e4e2f8.png)
-# Initialize npm project in Book
+### Initialize npm project in Book
 ![image](https://user-images.githubusercontent.com/53397202/191046380-dd7d5e55-9fd1-4b04-a615-f20cf2ded468.png)
-# Add a file to it named server.js
+### Add a file to it named server.js
 vi server.js
 Paste the code below;
 var express = require('express');
@@ -54,7 +54,7 @@ app.set('port', 3300);
 app.listen(app.get('port'), function() {
     console.log('Server up: http://localhost:' + app.get('port'));
 });
-# Install Express and set up routes to the server
+### Install Express and set up routes to the server
 
 Express is a minimal and flexible Node.js web application framework that provides features for web and mobile applications. We will use Express in to pass book information to and from our MongoDB database.
 
@@ -63,12 +63,12 @@ We also will use Mongoose package which provides a straight-forward, schema-base
 sudo npm install express mongoose
 
 ![image](https://user-images.githubusercontent.com/53397202/191047861-ef4bff0d-fd93-4690-9e53-e5166ed3f306.png)
-# In ‘Books’ folder, create a folder named apps
+### In ‘Books’ folder, create a folder named apps
 mkdir apps && cd apps
 
 ![image](https://user-images.githubusercontent.com/53397202/191048302-7fdf597d-41b5-47aa-802c-4339bd60b5d0.png)
 
-# Create a file named routes.js
+### Create a file named routes.js
 vi routes.js
 Paste the code below:
 var Book = require('./models/book');
@@ -109,9 +109,9 @@ module.exports = function(app) {
   });
 };
 
-# In the ‘apps’ folder, create a folder named models
+### In the ‘apps’ folder, create a folder named models
 mkdir models && cd models
-# Create a file named book.js
+### Create a file named book.js
 vi book.js
 Copy and paste to the file:
 var mongoose = require('mongoose');
@@ -127,14 +127,14 @@ var bookSchema = mongoose.Schema( {
 });
 var Book = mongoose.model('Book', bookSchema);
 module.exports = mongoose.model('Book', bookSchema);
-# Access the routes with AngularJS
+### Access the routes with AngularJS
 AngularJS provides a web framework for creating dynamic views in your web applications. In this tutorial, we use AngularJS to connect our web page with Express and perform actions on our book register.
 Change the directory back to ‘Books’
-# Create a folder named public
+### Create a folder named public
 mkdir public && cd public
 ![image](https://user-images.githubusercontent.com/53397202/191050925-75e1a37d-a54f-4a3f-804b-413059b3ff78.png)
 
-# Add a file named script.js
+### Add a file named script.js
 vi script.js
 Copy and paste the the code below into the file
 var app = angular.module('myApp', []);
@@ -174,7 +174,7 @@ app.controller('myCtrl', function($scope, $http) {
     });
   };
 });
-# In public folder, create a file named index.html;
+### In public folder, create a file named index.html;
 vi index.html
 copy and paste the code below into the file
 <!doctype html>
@@ -230,7 +230,7 @@ copy and paste the code below into the file
 
 ![image](https://user-images.githubusercontent.com/53397202/191052012-c6f31b44-38f5-454d-810b-1a54d26dc5c6.png)
 
-# Change the directory back up to Books and start node server.js
+### Change the directory back up to Books and start node server.js
 node server.js
 ![image](https://user-images.githubusercontent.com/53397202/191054461-0584518f-6010-480a-a1dc-101699451b1e.png)
 
