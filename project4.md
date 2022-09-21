@@ -1,5 +1,5 @@
 # MEAN STACK
-# updating in ubuntu machine
+### updating in ubuntu machine
 sudo apt update
 ![image](https://user-images.githubusercontent.com/53397202/191009540-4cbb6710-0710-4133-9b6a-a11b35a3c39c.png)
 # Upgrade the server
