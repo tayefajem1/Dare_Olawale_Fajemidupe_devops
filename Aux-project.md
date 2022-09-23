@@ -61,7 +61,7 @@ kmaSGj362OnCCNAAAACWRhcmVARGFyZQE=
 ### Create onboard.sh inside Shell folder
 vi onboard.sh
 paste 
-# Shell Scripting.
+### Shell Scripting.
  #This script will read a CSV file that contains 20 new Linux users.
  #This script will create each user on the server and add to an existing group called 'Developers'.
  #This script will first check for the existence of the user on the system, before it will attempt to create that it.
