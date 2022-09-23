@@ -145,4 +145,5 @@ sudo passwd -x 5 $user
  ls -l /home/  to see if developer is created
  getent group developers ( Can also be used to see if the developer is created)
  
-  
+  [Aux-Projects.pdf](https://github.com/tayefajem1/Dare_Project_devops/files/9633860/Aux-Projects.pdf)
+
