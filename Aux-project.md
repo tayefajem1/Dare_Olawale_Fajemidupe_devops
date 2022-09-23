@@ -147,3 +147,4 @@ sudo passwd -x 5 $user
  
   [Aux-Projects.pdf](https://github.com/tayefajem1/Dare_Project_devops/files/9633860/Aux-Projects.pdf)
 
+![Aux-Projectst](https://user-images.githubusercontent.com/53397202/191968627-3532d578-712f-4f8f-be12-270b01322123.jpg)
