@@ -1,4 +1,4 @@
-# Aux-Project
+# Auxilliary-Project
 ### Create a Folder called Shell and change to this folder
 mkdir Shell
 ### Inside Shell folder create names.csv, id_rsa.pem and id_rsa and fill the with essential information
